@@ -46,7 +46,7 @@ myPromise
     })
 ```
 
-## 프로미스 함수 등록 
+### 프로미스 함수 등록 
 위와 같이 프로미스 객체를 변수에 바로 할당하는 방식을 사용할 수도 있지만, 보통은 다음과 같이 별도로 함수로 감싸서 사용하는 것이 일반적이다.
 ```js
 function myPromise() {
@@ -82,10 +82,21 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
   .then((response) => response.json()) // 응답 객체에서 JSON 데이터를 추출한다.
   .then((data) => console.log(data)); // JSON 데이터를 콘솔에 출력한다.
 ```
+### 프로미스 3가지 상태
+프로미스는 비동기 작업의 결과를 약속하는 것이다. new Promise() 생성자로 프로미스 객체를 생성하면, 그 비동기 작업은 이미 진행 중이고, 언젠가는 성공하거나 실패할 것이다. 
+이러한 진행중, 성공, 실패 상태를 나타내는 것이 프로미스의 상태(state)라고 불리운다. 쉽게 말하자면 일종의 프로미스 처리 과정이라고 보면 된다.
 
+1. Pending(대기) : 처리가 완료되지 않은 상태(처리 진행중)
+2. Fulfilled (이행) : 성공적으로 처리가 완료된 상태
+3. Rejected(거부) : 처리가 실패로 끝난 상태
 
 ## 프로미스 정적 메서드
 ### Promise.resolve()
+### Promise.reject()
+### Promise.all()
+### Promise.allSettled()
+### Promise.any()
+### Promise.race()
 
 
 ## 참고 문서

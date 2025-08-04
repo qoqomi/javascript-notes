@@ -1,4 +1,6 @@
-/** 지연 실행 함수(delay) */
+/** 🟡 지연 실행 함수(delay)를 작성하라 
+ *  - promise를 이용
+ */
 const delay = (ms) => {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
